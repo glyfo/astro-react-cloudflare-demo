@@ -1,0 +1,25 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro on Cloudflare demo" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-100 min-h-screen">
+    <slot />
+    <footer class="container mx-auto p-6 text-center text-gray-500 text-sm">
+      <p>Demo of Island Architecture with Astro and Cloudflare Workers</p>
+    </footer>
+  </body>
+</html>
